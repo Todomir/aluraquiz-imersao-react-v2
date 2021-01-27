@@ -1,8 +1,8 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-import { ThemeProvider } from 'styled-components';
-import db from '../db.json';
-import GlobalStyle from '../global';
+import { ThemeProvider } from 'styled-components'
+import db from '../db.json'
+import GlobalStyle from '../global'
 
 export default function App({ Component, pageProps }) {
   return (
@@ -15,5 +15,5 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  );
+  )
 }

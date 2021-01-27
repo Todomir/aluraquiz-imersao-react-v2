@@ -1,8 +1,8 @@
-import { Container, Background, Widget } from '../components/styles';
-import Footer from '../components/Footer';
-import GithubCorner from '../components/GithubCorner';
+import { Container, Background, Widget } from '../components/styles'
+import Footer from '../components/Footer'
+import GithubCorner from '../components/GithubCorner'
 
-import db from '../db.json';
+import db from '../db.json'
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
         </Widget>
         <Footer />
       </Container>
-      <GithubCorner projectUrl='https://github.com/Todomir/aluraquiz-imersao-react-v2' />
+      <GithubCorner projectUrl="https://github.com/Todomir/aluraquiz-imersao-react-v2" />
     </Background>
-  );
+  )
 }

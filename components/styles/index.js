@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Background = styled.main`
   width: 100%;
@@ -32,7 +32,7 @@ export const Background = styled.main`
       z-index: 10;
     }
   }
-`;
+`
 
 export const Container = styled.div`
   width: 100%;
@@ -44,7 +44,7 @@ export const Container = styled.div`
     margin: auto;
     padding: 15px;
   }
-`;
+`
 
 export const Widget = styled.div`
   margin: 24px 0;
@@ -67,7 +67,7 @@ export const Widget = styled.div`
     font-weight: 400;
     line-height: 1;
   }
-`;
+`
 
 Widget.Header = styled.header`
   display: flex;
@@ -79,7 +79,7 @@ Widget.Header = styled.header`
   * {
     margin: 0;
   }
-`;
+`
 
 Widget.Content = styled.div`
   padding: 24px 32px 32px 32px;
@@ -95,7 +95,7 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
-`;
+`
 
 export const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.secondary};
@@ -119,4 +119,4 @@ export const Button = styled.button`
     background-color: #979797;
     cursor: not-allowed;
   }
-`;
+`
