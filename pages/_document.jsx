@@ -40,6 +40,21 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
             rel="stylesheet"
           />
+
+          <meta name="title" content="AluraQuiz"/>
+          <meta name="description" content="A simple quiz app developed during the Imersão Alura using styled-components and powered by Next.js and hosted on ▲Vercel."/>
+
+          <meta property="og:type" content="website"/>
+          <meta property="og:url" content="https://aluraquiz-imersao-react-v2.todomir.vercel.app/"/>
+          <meta property="og:title" content="AluraQuiz"/>
+          <meta property="og:description" content="A simple quiz app developed during the Imersão Alura using styled-components and powered by Next.js and hosted on ▲Vercel."/>
+          <meta property="og:image" content=""/>
+
+          <meta property="twitter:card" content="summary_large_image"/>
+          <meta property="twitter:url" content="https://aluraquiz-imersao-react-v2.todomir.vercel.app/"/>
+          <meta property="twitter:title" content="AluraQuiz"/>
+          <meta property="twitter:description" content="A simple quiz app developed during the Imersão Alura using styled-components and powered by Next.js and hosted on ▲Vercel."/>
+          <meta property="twitter:image" content=""/>
         </Head>
         <body>
           <Main />
