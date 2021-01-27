@@ -1,7 +1,21 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, DefaultTheme } from 'styled-components'
+
+export interface ITheme extends DefaultTheme {
+  theme: {
+    colors: {
+      primary: string
+      secondary: string
+      bg: string
+      contrastText: string
+      wrong: string
+      success: string
+    }
+    borderRadius: string
+  }
+}
 
 const GlobalStyle = createGlobalStyle`
-  * {
+  *, input, button {
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -14,7 +28,15 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     font-family: 'Work Sans', sans-serif;
-    color: ${({ theme }) => theme.colors.contrastText};
+    color: ${({ theme }: ITheme) => theme.colors.contrastText};
+  }
+
+  input {
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  button {
+    font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -32,6 +54,6 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

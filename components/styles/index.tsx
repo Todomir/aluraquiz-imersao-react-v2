@@ -1,6 +1,10 @@
-import styled from 'styled-components'
+import styled, { StyledComponentBase } from 'styled-components'
 
-export const Background = styled.main`
+interface IBackground {
+  backgroundImage: string
+}
+
+export const Background = styled.main<IBackground>`
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -46,7 +50,12 @@ export const Container = styled.div`
   }
 `
 
-export const Widget = styled.div`
+interface IWidget extends StyledComponentBase<'div', {}> {
+  Header?: StyledComponentBase<'header', {}>
+  Content?: StyledComponentBase<'section', {}>
+}
+
+export const Widget: IWidget = styled.div`
   margin: 24px 0;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.bg};
@@ -81,7 +90,7 @@ Widget.Header = styled.header`
   }
 `
 
-Widget.Content = styled.div`
+Widget.Content = styled.section`
   padding: 24px 32px 32px 32px;
 
   & > *:first-child {
@@ -97,6 +106,25 @@ Widget.Content = styled.div`
   }
 `
 
+export const Input = styled.input`
+  padding: 10px 15px;
+  width: 100%;
+  margin: 30px auto;
+  background-color: ${({ theme }) => theme.colors.bg};
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  color: ${({ theme }) => theme.colors.contrastText};
+  outline: none;
+  font-size: 14px;
+
+  transition: all 0.3s;
+
+  &:focus {
+    padding: 12px 17px;
+    border: 1px solid ${({ theme }) => theme.colors.secondary};
+  }
+`
+
 export const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.contrastText};
@@ -107,6 +135,7 @@ export const Button = styled.button`
   font-weight: bold;
   font-size: 14px;
   line-height: 1;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   outline: 0;
   transition: 0.3s;
