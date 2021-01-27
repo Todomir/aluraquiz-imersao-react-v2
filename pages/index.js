@@ -21,7 +21,7 @@ export default function Home() {
         </Widget>
         <Footer />
       </Container>
-      <GithubCorner projectUrl='https://github.com/Todomir' />
+      <GithubCorner projectUrl='https://github.com/Todomir/aluraquiz-imersao-react-v2' />
     </Background>
   );
 }
